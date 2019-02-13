@@ -1,3 +1,4 @@
+import React from 'react';
 import {observable, action, computed} from 'mobx';
 
 export class Todo {
@@ -54,6 +55,6 @@ export class TodoStore {
     }
 };
 
-const store = new TodoStore();
-
-export default store;
+export default React.createContext(
+    new TodoStore()
+)
